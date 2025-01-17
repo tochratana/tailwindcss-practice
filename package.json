@@ -1,5 +1,13 @@
 {
   "devDependencies": {
     "tailwindcss": "^3.4.17"
+  },
+  "scripts": {
+    "dev": "concurrently \"npx tailwindcss -i ./src/input.css -o ./src/output.css --watch\" \"npm run live\"",
+    "live": "live-server --port=3000 --open=src"
+  },
+  "dependencies": {
+    "concurrently": "^9.1.2",
+    "live-server": "^1.2.2"
   }
 }
